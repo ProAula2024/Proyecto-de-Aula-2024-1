@@ -8,30 +8,30 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-
 import com.API.kanitas.Entities.NewsletterUser;
-import com.API.kanitas.Entities.Publication;
 import com.API.kanitas.Repositories.EmailRepository;
-import com.API.kanitas.Repositories.PublicationRepository;
 
+import com.API.kanitas.Entities.ProductCategory;
+import com.API.kanitas.Repositories.CategoryRepository;
 
 @RestController
 public class MainController {
 
     @Autowired
     private EmailRepository emailRepository; 
+
     @Autowired
-    private PublicationRepository publicationRepository;
+    private CategoryRepository categoryRepo;
 
     @CrossOrigin
-    @PostMapping(path="/add")
+    @PostMapping(path="/newsletter/add")
     public String addNewEmail(@RequestBody NewsletterUser newu) {
         emailRepository.save(newu);
         return "Saved";
     }
 
     @CrossOrigin
-    @GetMapping(path="/all")
+    @GetMapping(path="/newsletter/showAll")
     public @ResponseBody Iterable<NewsletterUser> getAllNewsletterUser() {
         return emailRepository.findAll();
     }
@@ -42,10 +42,9 @@ public class MainController {
         return "initialized!";
     }
 
-    ///Publication test
     @CrossOrigin
-    @GetMapping(path="all/publi")
-    public @ResponseBody Iterable<Publication> getAllPublications() {
-        return publicationRepository.findAll();
+    @GetMapping(path="/categories/showAll")
+    public @ResponseBody Iterable<ProductCategory> getAllProductCategories() {
+        return categoryRepo.findAll();
     }
 }
