@@ -17,4 +17,7 @@ public interface ProductRepository extends JpaRepository<Products, Integer>{
 
     @Query("FROM Products WHERE product_category = ?1")
     List<Products> findByCategory(Optional<ProductCategory> search);
+
+    @Query("FROM Products WHERE product_name = ?1")
+    List<Products> findByName(String name);
 }

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-	--primary-color: #f4009a 0% 4%);
+	--primary-color: (#f4009a 0% 4%);
 	--background-color: #f9f5f0;
 	--dark-color: #151515;
 }
@@ -203,7 +203,7 @@ html {
 /* ********************************** */
 .banner {
 	background-image: linear-gradient(100deg, #000000, #00000020),
-		url('img/BANNER.jpeg');
+		url('assets/BANNER.jpeg');
 	height: 60rem;
 	background-size: cover;
 	background-position: center;
@@ -318,29 +318,28 @@ html {
 }
 
 .category-ensalada {
-    background-image: linear-gradient(#00000080, #00000080), url('Img/BuhoK.jpg');
-    background-size: contain;
+    background-image: linear-gradient(#00000080, #00000080), url('assets/BuhoK.jpg');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .category-copas {
-    background-image: linear-gradient(#00000080, #00000080), url('img/CopaOreoP.jpg');
-    background-size: contain;
+    background-image: linear-gradient(#00000080, #00000080), url('assets/CopaOreoP.jpg');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .category-especiales {
-    background-image: linear-gradient(#00000080, #00000080), url('Img/BuhoK.jpg');
-    background-size: contain;
+    background-image: linear-gradient(#00000080, #00000080), url('assets/ArañitaK.jpg');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 
 .card-category p {
-	font-size: 2.5rem;
 	color: #fff;
 	text-transform: capitalize;
 	position: relative;

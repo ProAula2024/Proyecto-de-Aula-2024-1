@@ -6,7 +6,11 @@ module.exports = {
       fontFamily: {
         "opensans": ["Open Sans", "sans-serif"],
         "yellowtail": ["Yellowtail", "cursive"],
-      }
+      },
+
+      colors: {
+        "complementary": "#27DB8B",
+      },
     },
   },
   plugins: [],

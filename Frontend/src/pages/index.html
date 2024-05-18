@@ -2,170 +2,118 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>KANITAS DULCES</title>
+
 		<link rel="stylesheet" href="../output.css"/>
 		<link rel="stylesheet" href="../styles.css"/>
+
+		<script src="../js/API Calls.js" type="module"></script>
 	</head>
 
 	<body>
-		<!-- <script src="../js/API Calls.js" type="module"/> -->
-
 		<header class="bg-pink-600">
-				<h1 class=" py-7 text-5xl font-yellowtail flex text-black justify-center rotate-[-12deg]">KANITAS <br>DULCES</h1>
-				<nav class="border-t--2 border-white h-16">
-					<ul class="text-3xl text-white flex justify-center gap-10 font-opensans py-5">
-						<li><a href="#">MENU</a></li>
-						<li><a href="index.html" class="hover:text-black">INICIO</a></li>
-						<li><a href="copas.html">COPAS</a></li>
-						<li><a href="ensalada.html">ENSALADAS</a></li>
-						<li><a href="especiales.html">ESPECIALES</a></li>
-					</ul>
-				</nav>
-				
+			<div class="py-12 flex rotate-[-5deg] mr-[10px] justify-center">
+				<h1 class="text-5xl font-yellowtail text-complementary scale-150">KANITAS <br>DULCES</h1>
+			</div>
+			
+			<nav class="h-16">
+				<div class="text-3xl text-white flex justify-center gap-10 font-opensans py-5">
+					<a class="hover:text-complementary border-white hover:border-b-2" href="#">INICIO</a>
+					<a class="hover:text-complementary border-white hover:border-b-2" href="copas.html">COPAS</a>
+					<a class="hover:text-complementary border-white hover:border-b-2" href="ensalada.html">ENSALADAS</a>
+					<a class="hover:text-complementary border-white hover:border-b-2" href="#special">ESPECIALES</a>
+				</div>
+			</nav>	
 		</header>
 
+		<main class="main-content">
 		<section class="banner">
-			<div class="content-banner font-yellowtail">
-				<p>POR FUERA HERMOSO</p>
-				<h2>POR DENTRO <br />DELICIOSO</h2>
+			<div class="content-banner font-yellowtail text-white">
+				<p class="font-opensans">POR FUERA HERMOSO</p>
+				<h2>POR DENTRO <br> DELICIOSO</h2>
 			</div>
 		</section>
 
-		<section class="gallery">
-			<img
-				src="../assets/gallery1.jpg"
-				alt="Gallery Img1"
-				class="gallery-img-1"
-			/><img
-				src="../assets/gallery2.jpg"
-				alt="Gallery Img2"
-				class="gallery-img-2"
-			/><img
-				src="../assets/gallery3.png"
-				alt="Gallery Img3"
-				class="gallery-img-3"
-			/><img
-				src="../assets/gallery4.png"
-				alt="Gallery Img4"
-				class="gallery-img-4"
-			/><img
-				src="../assets/gallery5.png"
-				alt="Gallery Img5"
-				class="gallery-img-5"
-			/>
+		<section class="bg-pink-600 h-auto gallery">
+			<img src="../assets/gallery1.jpg" alt="Gallery Img1" class="gallery-img-1"/>
+			<img src="../assets/PayasitoK.jpg" alt="Gallery Img2" class="gallery-img-2"/>
+			<img src="../assets/gallery3.png" alt="Gallery Img3" class="gallery-img-3"/>
+			<img src="../assets/gallery4.png" alt="Gallery Img4" class="gallery-img-4"/>
+			<img src="../assets/gallery5.png" alt="Gallery Img5" class="gallery-img-5"/>
 		</section>
 
-		<main class="main-content bg-pink-500">
-			<section class="container top-categories">
-				<h1 class="heading-1">Categorías</h1>
-				<div class="container-categories">
-					<div class="card-category category-ensalada">
-						<p>Ensalada</p>
-						<span>Ver más</span>
+		<section class="flex top-categories py-10 justify-center text-complementary">
+				<h1 class="font-yellowtail text-7xl text-pink-600 font-bold text-center">Categorías</h1>
+				<div class="container-categories px-20">
+					<div class="card-category category-ensalada shadow-lg hover:-translate-y-2 duration-200 ease-in-out">
+						<a href="ensalada.html" class="text-6xl font-opensans font-bold">Ensalada</a>
 					</div>
-					<div class="card-category category-copas">
-						<p>Copas</p>
-						<span>Ver más</span>
+					<div class="card-category category-copas shadow-lg hover:-translate-y-2 duration-200 ease-in-out">
+						<a href="copas.html" class="text-6xl font-opensans font-bold">Copas</a>
 					</div>
-					<div class="card-category category-especiales">
-						<p>Especiales</p>
-						<span>Ver más</span>
+					<div class="card-category category-especiales shadow-lg hover:-translate-y-2 duration-200 ease-in-out">
+						<a href="" class="text-6xl font-opensans font-bold">Especiales</a>
 					</div>
 				</div>
-			</section>
+		</section>
 
-			<section class="container top-products">
-				<h1 class="heading-1">Nuestros Productos</h1>
+		<section>
+			<div class="w-full p-5 flex justify-center">
+				<h1 class="font-yellowtail font-bold text-pink-600 text-8xl">Nuestros Productos</h1>
+			</div>
+			
 
-				<div class="flex justify-center gap-8 font-opensans font-semibold pl-6">
-					<button class="px-14 py-4 text-2xl bg-white shadow-lg rounded-full hover:bg-[#f4009a] hover:-translate-y-2 duration-200 hover:text-white" onclick="fetchFeatured()">Destacados</button>
-					<button class="px-14 py-4 text-2xl bg-white shadow-lg rounded-full hover:bg-[#f4009a] hover:-translate-y-2 duration-200 hover:text-white">Más recientes</button>
-					<button class="px-20 py-4 text-2xl bg-white shadow-lg rounded-full hover:bg-[#f4009a] hover:-translate-y-2 duration-200 hover:text-white">Mejores <br> Vendidos</button>
-				</div>
-
-				<div id="multiList" class="gap-7 flex-wrap flex justify-center"></div>
-
-				<!--Test-->
-				<div class="gap-7 flex-wrap flex justify-center">
-				<!--Card-->					
-					<div class="pt-20">
-						<div class="transition ease-in-out hover:scale-110 bg-white rounded-xl shadow-md h-96 flex flex-col relative w-80 flex-shrink hover:-translate-y-2 duration-200">
-							<img class="absolute w-full top-0 transform -translate-y-1/2" src="../assets/ArañitaK.png">
-							<div class="mt-32 px-6 text-black flex-1 text-center pt-10 font-opensans">
-								<h2 class="font-extrabold text-4xl mt-3">Conejito</h2>
-								<h4 class="text-2xl font-bold text-gray-800 mt-3">Contiene:</h4>
-								<p class="text-xl">Bla bla bla, bla bla bla y bla bla bla</p>
-								<h2 class="text-3xl font-bold my-5">$10.000</h2>
-								
-							</div>
-						</div>
-					</div>
-
-				</div>
+			<div class="flex justify-center gap-8 font-opensans font-semibold pl-6 pt-10">
+				<button class="px-14 py-4 text-2xl bg-white shadow-lg rounded-full hover:bg-[#f4009a] hover:-translate-y-2 duration-200 hover:text-white" onclick="fetchFeatured()">Destacados</button>
+				<button class="px-14 py-4 text-2xl bg-white shadow-lg rounded-full hover:bg-[#f4009a] hover:-translate-y-2 duration-200 hover:text-white">Más recientes</button>
+				<button class="px-20 py-4 text-2xl bg-white shadow-lg rounded-full hover:bg-[#f4009a] hover:-translate-y-2 duration-200 hover:text-white">Mejores <br> Vendidos</button>
+			</div>
+			<div id="multiList" class="gap-7 flex-wrap flex justify-center"></div>
 
 
-			</section>
-
-			<div class="font-opensans text-center">
-				<!--Especiales-->
-				<section class="my-16">
-					<h1 class="text-5xl font-bold">Especiales</h1>
+			<div class="font-opensans text-center flex flex-col gap-y-10">
+				<section class="my-12">
+					<h1 class="text-7xl font-bold pb-24 font-yellowtail text-pink-600">Especiales</h1>
 					<div id="specials" class="gap-7 flex-wrap flex justify-center"></div>
 				</section>
-				<!--End-->
-
-
-				<!--Copas-->
-				<section class="my-16">
-					<h1 class="text-5xl font-bold">Copas</h1>
+				<section class="my-12">
+					<h1 class="text-7xl font-bold pb-24 font-yellowtail text-pink-600">Copas</h1>
 					<div id="copas" class="gap-7 flex-wrap flex justify-center"></div>
 				</section>
-				<!--End-->
-
-
-				<!--Conos-->
-				<section class="my-16">
-					<h1 class="text-5xl font-bold">Conos</h1>
-					<div id="conos" class="gap-7 flex-wrap flex justify-center"></div>
+				<section class="my-12">
+					<h1 class="text-7xl font-bold pb-24 font-yellowtail text-pink-600">Ensaladas</h1>
+					<div id="ensaladas" class="gap-7 flex-wrap flex justify-center"></div>
 				</section>
-				<!--End-->
 			</div>
+
+		</section>	
 
 		</main>
 
-		<!--Footer-->
 		<footer class="bg-pink-600 text-white">
-			<div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+			<div class="mx-auto w-full p-4 py-6 lg:py-8">
 				<div class="md:flex md:justify-between">
-					<div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 p-6">
-						<!--First Column-->
-						<div>
+					<div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2 p-5">
+						<div class="grid gap-y-2 text-2xl">
 							<h5 class="text-3xl font-bold">Informacion de Contacto</h5>
+							<p>Dirección: Plaza principal de turbaco al lado de ibiza</p>
+							<p>Teléfono: 313921805</p>
+							<p>Fax: 55555300</p>
+							<p>EmaiL: Kanitas@support.com</p>
 						</div>
-						<!--End-->
-
-
-						<!--Second Column-->
-						<div>
-							<h5 class="text-3xl font-bold">Informacion de Contacto</h5>
-						</div>
-						<!--End-->
-
-
-						<!--Third Column-->
-						<div class="gap-y-5">
+						<div class="grid gap-y-2">
 							<h5 class="text-3xl font-bold">Boletín Informativo</h5>
-							<p class="text-2xl break-normal">Suscríbete a nuestros boletines ahora y mantente al día con nuevas colecciones y ofertas exclusivas.</p>
-							<form>
-								<input type="email" placeholder="Ingrese su correo aqui..."><br><br>
-								<button class="bg-[#27DB8B] rounded-full fot-bold text-3xl p-4 text-[#DB2777] shadow-md">Suscribirse</button>
+							<p class="text-xl break-normal">Suscríbete a nuestros boletines ahora y mantente al día con nuevas colecciones y ofertas exclusivas.</p>
+							
+							<form id="newslettersub" method="POST">
+								<input class="" type="email" placeholder="Ingrese su correo aqui..." name="email"><br><br>
+								<button class="bg-complementary rounded-full fot-bold text-3xl p-4 shadow-md" type="submit">Suscribirse</button>
 							</form>
 						</div>
-						<!--End-->
 					</div>
 				</div>
 			</div>
 		</footer>
-		<!--Fotter End-->
 	</body>
 </html>

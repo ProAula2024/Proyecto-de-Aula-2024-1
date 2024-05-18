@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Crear</title>
+    </head>
+
+    <body>
+        <script src="../js/Admin Calls.js" type="module"></script>
+
+        <form id="createProduct" enctype="multipart/form-data">
+            <label>Nombre del producto</label>
+            <input type="text" name="product_name">
+            <label>Precio</label>
+            <input type="text" name="product_price">
+            <label>Ingredientes</label>
+            <input type="text" name="product_ingredients">
+            <label>Promocionado</label>
+            <select name="is_featured">
+                <option value="1">Si</option>
+                <option value="0">No</option>
+            </select>
+            <label>Categoria</label>
+            <select id="selectedCategory" name="product_category"></select>
+            <label>Imagen</label>
+            <input type="file" name="product_image" id="image_upload">
+
+            <button type="submit">Crear</button>
+        </form>
+
+        <p>Correos registrados en el newsletter</p>
+        <div id="newsletter"></div>
+
+        <h2>Categorias</h2>
+        <div>
+            <p>Añadir categoria <button>Añadir</button></p>
+            <div>
+                <form id="createCategory" method="POST">
+                    <label><strong>Nueva Categoria</strong></label><br>
+                    <label>Nombre: </label>
+                    <input type="text" name="category_name">
+                    <button type="submit">Crear</button>
+                </form>
+            </div>
+
+            <h4>Categorias Actuales</h4>
+            <div id="categories"></div>
+        </div>
+        <div id="categoryError"></div>
+    </body>
+</html>

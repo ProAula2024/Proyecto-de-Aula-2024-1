@@ -10,5 +10,4 @@ public class KanitasApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(KanitasApplication.class, args);
 	}
-
 }

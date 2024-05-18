@@ -3,8 +3,11 @@ package com.API.kanitas.Entities;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Entity
+@EnableWebMvc
 public class Products {
     
     @Id
@@ -16,10 +19,6 @@ public class Products {
     @Getter 
     @Setter
     private String product_name;
-
-    @Getter
-    @Setter
-    private String product_image_url;
 
     @Getter
     @Setter
@@ -38,4 +37,9 @@ public class Products {
     @Getter
     @Setter
     private String product_ingredients;
+
+    @Getter
+    @Setter
+    @Transient
+    private MultipartFile product_image;
 }
